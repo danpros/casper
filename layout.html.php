@@ -90,9 +90,9 @@
 			<div class="outer site-header-background no-image">
 				<div class="inner site-header-content">
 					<h1 class="site-title"><?php echo $category->title;?></h1>
-					<h2 class="site-description">
+					<div class="site-description">
 					<?php echo $category->body; ?>
-					</h2>
+					</div>
 				</div>
 					
 			</div>
