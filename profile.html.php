@@ -56,7 +56,7 @@
 			</ul>
 			<div class="post-card-byline-content">
 				<span><a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a></span>
-				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time></span> 
+				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
 			</div>
 		</footer>
 	</div>
