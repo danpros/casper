@@ -28,7 +28,7 @@
 	<section class="post-full-content">
 		<div class="post-content">
 		<?php if (!empty($p->image)): ?>
-		<img src="<?php echo $p->image;?>">
+			<p><img src="<?php echo $p->image;?>"></p>
 		<?php endif;?>
 		<?php if (!empty($p->video)) { ?>
 			<p><iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $p->video; ?>" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=" frameborder="0"></iframe></p>
