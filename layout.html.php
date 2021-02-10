@@ -7,7 +7,10 @@
     <link rel="canonical" href="<?php echo $canonical; ?>" />
     <?php if (publisher()): ?>
     <link href="<?php echo publisher() ?>" rel="publisher" /><?php endif; ?>
-<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>themes/casper/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>themes/casper/css/style.css">
+	<?php if (config('casper.dark') == 'true') :?>
+	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>themes/casper/css/dark.css">
+	<?php endif;?>
 </head>
 <?php     
     if (isset($_GET['search'])) {
@@ -21,7 +24,11 @@
 <?php if (login()) { toolbar(); } ?>
 	<div class="site-wrapper">
 		<header class="site-home-header">
+		<?php if (empty(config('casper.header'))) {?>
 		<style type="text/css">.responsive-header-img {background-image: url(<?php echo site_url();?>themes/casper/images/publication-cover.jpg);}</style>
+		<?php } else {?>
+		<style type="text/css">.responsive-header-img {background-image: url(<?php echo config('casper.header')?>);}</style>
+		<?php } ?>
 			<div class="outer site-header-background responsive-header-img">
 <?php } elseif (isset($is_post) || isset($is_page) || isset($is_subpage) || isset($is_404) || isset($is_404search)) {?>
 <body class="post-template">
@@ -283,7 +290,9 @@
 			<section class="copyright">© <?php echo config('blog.title');?> </section>
 				<nav class="site-footer-nav">
 				<a href="<?php echo site_url();?>">Home</a>
-				<a href="https://www.htmly.com">HTMLy</a>
+				<a rel="nofollow" target="_blank" href="<?php echo (config('social.facebook'));?>">Facebook</a>
+				<a rel="nofollow" target="_blank" href="<?php echo (config('social.twitter'));?>">Twitter</a>
+				<a rel="nofollow" target="_blank" href="https://www.htmly.com">HTMLy</a>
 				</nav>
 			</div>
 		</footer>
