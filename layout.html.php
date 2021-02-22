@@ -83,8 +83,8 @@
 						<div class="author-bio"><?php echo $about;?></div>
 						<div class="author-meta">
 							<span class="author-social-link"><a href="<?php echo site_url();?>" target="_blank" rel="noopener">Website</a></span>
-							<span class="author-social-link"><a href="<?php echo config('social.twitter');?>" target="_blank" rel="noopener">Twitter</a></span>
-							<span class="author-social-link"><a href="<?php echo config('social.facebook');?>" target="_blank" rel="noopener">Facebook</a></span>
+							<?php if(!empty(config('social.twitter'))):?><span class="author-social-link"><a href="<?php echo config('social.twitter');?>" target="_blank" rel="noopener">Twitter</a></span><?php endif;?>
+							<?php if(!empty(config('social.facebook'))):?><span class="author-social-link"><a href="<?php echo config('social.facebook');?>" target="_blank" rel="noopener">Facebook</a></span><?php endif;?>
 						</div>
 					</div>
 				</div>		
