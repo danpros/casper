@@ -4,15 +4,11 @@ Ghost Casper theme ported to HTMLy.
 ## Installations 
  -  Upload and extract the zip file into themes directory.
  -  Rename the extracted folder to `casper`.
- -  Change the `views.root` using `http://www.example.com/admin/config` to `themes/casper`
+ -  Activate it from HTMLy panel.
  
 ## Dark Mode
 
-Add new custom value in your config page.
-
-``` 
-casper.dark = "true"
-```
+Add new custom config in your config page with key: `casper.dark` and value: `true`
 
 
 ## Custom Header
