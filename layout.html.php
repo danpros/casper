@@ -291,12 +291,12 @@
 		
 		<footer class="site-footer outer">
 			<div class="site-footer-content inner">
-			<section class="copyright">© <?php echo config('blog.title');?> </section>
+            <style>.copyright p {display:inline;margin-right:5px;}</style>
+            <section class="copyright"><?php echo copyright();?> </section>
 				<nav class="site-footer-nav">
 				<a href="<?php echo site_url();?>">Home</a>
 				<?php if(!empty(config('social.facebook'))):?><a rel="nofollow" target="_blank" href="<?php echo (config('social.facebook'));?>">Facebook</a><?php endif;?>
 				<?php if(!empty(config('social.twitter'))):?><a rel="nofollow" target="_blank" href="<?php echo (config('social.twitter'));?>">Twitter</a><?php endif;?>
-				<a rel="nofollow" target="_blank" href="https://www.htmly.com">HTMLy</a>
 				</nav>
 			</div>
 		</footer>
