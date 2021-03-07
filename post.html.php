@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <article class="post-full post">
 	<header class="post-full-header">
 		<?php if (!empty($p->link)) { ?>

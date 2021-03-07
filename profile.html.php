@@ -1,3 +1,4 @@
+<?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <div class="post-feed">
 <?php $i = 0; $len = count($posts); ?>
 <?php foreach ($posts as $p): ?>
