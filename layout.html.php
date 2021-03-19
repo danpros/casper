@@ -141,15 +141,14 @@
 		<aside class="read-next outer">
 			<div class="inner">
 				<div class="read-next-feed">
-					<?php $related = get_related($p->related, true, 2);?>
-					<?php if (!empty($related)) {?>
+					<?php $recent = recent_posts(true);?>
 					<article class="read-next-card">
 						<header class="read-next-card-header">
-							<h3>Related posts by tag</h3>
+							<h3>Recent posts</h3>
 						</header>
 						<div class="read-next-card-content">
 							<ul>
-							<?php foreach ($related as $r): ?>
+							<?php foreach ($recent as $r): ?>
 							<li style="padding-bottom:0;">
                                 <h4><a href="<?php echo $r->url;?>"><?php echo $r->title;?></a></h4>
                                 <div class="read-next-card-meta">
@@ -163,7 +162,6 @@
 							See all posts in <?php echo $p->category;?>
 						</footer>
 					</article>
-					<?php } ?>
 					
 					<?php if (!empty($next)): ?>
 					<article class="post-card post" style="min-height:20px;padding:0 0 20px 0;margin:0px 25px 25px 25px;">

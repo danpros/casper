@@ -41,8 +41,9 @@
 		<?php } ?>
 		<?php echo $p->body;?>
 		</div>
+		<style>.related-posts {font-size:1.7rem;}.related-posts li {margin:5px;}.tag a::after {content: ',';} .tag a:last-child:after {content:'';}</style>
 		<div class="tag read-next-card-content">Tag: <?php echo $p->tag;?></div>
-		
+		<div class="related-posts" style="font-size: 1.7rem;"><hr><h6>Related posts</h6><?php echo get_related($p->related);?></div>
 		<?php if (disqus()): ?>
 			<?php echo disqus($p->title, $p->url) ?>
 		<?php endif; ?>
