@@ -31,7 +31,7 @@
 			<p><img src="<?php echo $p->image;?>"></p>
 		<?php endif;?>
 		<?php if (!empty($p->video)) { ?>
-			<p><iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo $p->video; ?>" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=" frameborder="0"></iframe></p>
+			<p><iframe width="100%" height="315" src="https://www.youtube.com/embed/<?php echo get_video_id($p->video); ?>" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=" frameborder="0"></iframe></p>
 		<?php } ?>
 		<?php if (!empty($p->audio)) { ?>
 			<p><iframe class="embed-responsive-item" scrolling="no" width="100%" height="200" frameborder="no" src="https://w.soundcloud.com/player/?url=<?php echo $p->audio;?>&amp;auto_play=false&amp;visual=true"></iframe></p>
