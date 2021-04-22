@@ -12,12 +12,12 @@
 				<ul class="author-list">
 					<li class="author-list-item">
 						<a href="<?php echo $p->authorUrl;?>" class="author-avatar">
-							<img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $p->author;?>">
+							<img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $p->authorName;?>">
 						</a>
 					</li>
 				</ul>
 				<section class="post-full-byline-meta">
-					<h4 class="author-name"><a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a></h4>
+					<h4 class="author-name"><a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></h4>
 					<div class="byline-meta-content">
 					<time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?>
 					</div>

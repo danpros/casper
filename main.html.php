@@ -1,17 +1,8 @@
 <?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <div class="post-feed">
-<?php $i = 0; $len = count($posts); ?>
 <?php foreach ($posts as $p): ?>
-    <?php if ($i == 0) {
-        $class = ' first ';
-    } elseif ($i == $len - 1) {
-        $class = ' last';
-    } else {
-        $class = ' ';
-    }
-    $i++; ?>
 <?php $img = get_image($p->body);?>
-<article class="post-card post <?php echo $class ?>">
+<article class="post-card post">
 	<?php if (!empty($p->image)) { ?>
 	<a class="post-card-image-link" href="<?php echo $p->url;?>">
 		<img class="post-card-image" src="<?php echo $p->image;?>">
@@ -52,11 +43,11 @@
 			<ul class="author-list">
 				<li class="author-list-item">
 					<div class="author-name-tooltip"><?php echo $p->author;?></div>
-					<a href="<?php echo $p->authorUrl;?>" class="static-avatar"><img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $p->author;?>"/></a>
+					<a href="<?php echo $p->authorUrl;?>" class="static-avatar"><img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $p->authorName;?>"/></a>
 				</li>
 			</ul>
 			<div class="post-card-byline-content">
-				<span><a href="<?php echo $p->authorUrl;?>"><?php echo $p->author;?></a></span>
+				<span><a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></span>
 				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
 			</div>
 		</footer>
