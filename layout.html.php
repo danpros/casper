@@ -1,6 +1,6 @@
 <?php if (!defined('HTMLY')) die('HTMLy'); ?>
 <!DOCTYPE html>
-<html lang="<?php echo str_replace('_', '-', config('language'));?>">
+<html lang="<?php echo blog_language();?>">
 <head>    
     <?php echo head_contents();?>
     <title><?php echo $title;?></title>
@@ -8,25 +8,18 @@
     <link rel="canonical" href="<?php echo $canonical; ?>" />
     <?php if (publisher()): ?>
     <link href="<?php echo publisher() ?>" rel="publisher" /><?php endif; ?>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>themes/casper/css/style.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
 	<?php if (config('casper.dark') == 'true') :?>
-	<link rel="stylesheet" type="text/css" href="<?php echo site_url();?>themes/casper/css/dark.css">
+	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">
 	<?php endif;?>
 </head>
-<?php     
-    if (isset($_GET['search'])) {
-        $search = _h($_GET['search']);
-        $url = site_url() . 'search/' . remove_accent($search);
-        header("Location: $url");
-    }
-?>
 <?php if (isset($is_front)) {?>
 <body class="home-template">
 <?php if (login()) { toolbar(); } ?>
 	<div class="site-wrapper">
 		<header class="site-home-header">
 		<?php if (empty(config('casper.header'))) {?>
-		<style type="text/css">.responsive-header-img {background-image: url(<?php echo site_url();?>themes/casper/images/publication-cover.jpg);}</style>
+		<style type="text/css">.responsive-header-img {background-image: url(<?php echo theme_path();?>images/publication-cover.jpg);}</style>
 		<?php } else {?>
 		<style type="text/css">.responsive-header-img {background-image: url(<?php echo config('casper.header')?>);}</style>
 		<?php } ?>
@@ -48,7 +41,7 @@
 					<nav class="site-nav">
 						<div class="site-nav-left-wrapper">
 							<div class="site-nav-left">
-								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="Ghost"></a>
+								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.png" alt="Ghost"></a>
 								<div class="site-nav-content">
 									<?php echo menu();?>
 								</div>
@@ -77,7 +70,7 @@
 			<?php if (isset($is_profile)):?>		
 			<div class="outer site-header-background no-image">
 				<div class="inner site-header-content author-header">
-					<img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $name;?>">
+					<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $name;?>">
 					<div class="author-header-content">
 						<h1 class="site-title"><?php echo $name;?></h1>
 						<style>.author-bio p {margin:0;}</style>
@@ -210,7 +203,7 @@
 										</div>
 								
 										<a href="<?php echo($next['authorUrl']); ?>" class="static-avatar">
-											<img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo($next['title']); ?>">
+											<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo($next['title']); ?>">
 										</a>
 									</li>
 								</ul>
@@ -270,7 +263,7 @@
 										</div>
 								
 										<a href="<?php echo($prev['authorUrl']); ?>" class="static-avatar">
-											<img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo($prev['title']); ?>">
+											<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo($prev['title']); ?>">
 										</a>
 									</li>
 								</ul>
