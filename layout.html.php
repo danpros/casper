@@ -6,8 +6,6 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
-    <?php if (publisher()): ?>
-    <link href="<?php echo publisher() ?>" rel="publisher" /><?php endif; ?>
 	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
 	<?php if (config('casper.dark') == 'true') :?>
 	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">
@@ -137,7 +135,7 @@
 					<?php $recent = recent_posts(true);?>
 					<article class="read-next-card">
 						<header class="read-next-card-header">
-							<h3>Recent posts</h3>
+							<h3><?php echo i18n('Recent_posts');?></h3>
 						</header>
 						<div class="read-next-card-content">
 							<ul>
@@ -152,7 +150,7 @@
 							</ul>
 						</div>
 						<footer class="read-next-card-footer" style="margin-bottom:25px;">
-							See all posts in <?php echo $p->category;?>
+							<?php echo i18n('All_blog_posts');?>: <?php echo $p->category;?>
 						</footer>
 					</article>
 					
@@ -161,7 +159,7 @@
 						<div class="post-card-content">
 							<a class="post-card-content-link" href="<?php echo($next['url']); ?>">
 								<header class="post-card-header" style="margin:0;">
-									<div class="post-card-primary-tag">Next Post</div>
+									<div class="post-card-primary-tag"><?php echo i18n('Next_post');?></div>
 									
 									<?php $img = get_image($next['body']);?>
 									<?php if (!empty($next['image'])) { ?>
@@ -221,7 +219,7 @@
 						<div class="post-card-content">
 							<a class="post-card-content-link" href="<?php echo($prev['url']); ?>">
 								<header class="post-card-header" style="margin:0;">
-									<div class="post-card-primary-tag">Previous Post</div>
+									<div class="post-card-primary-tag"><?php echo i18n('Prev_post');?></div>
 										
 									<?php $img = get_image($prev['body']);?>
 									<?php if (!empty($prev['image'])) { ?>
@@ -286,7 +284,7 @@
             <style>.copyright p {display:inline;margin-right:5px;}</style>
             <section class="copyright"><?php echo copyright();?> </section>
 				<nav class="site-footer-nav">
-				<a href="<?php echo site_url();?>">Home</a>
+				<a href="<?php echo site_url();?>"><?php echo config('breadcrumb.home');?></a>
 				<?php if(!empty(config('social.facebook'))):?><a rel="nofollow" target="_blank" href="<?php echo (config('social.facebook'));?>">Facebook</a><?php endif;?>
 				<?php if(!empty(config('social.twitter'))):?><a rel="nofollow" target="_blank" href="<?php echo (config('social.twitter'));?>">Twitter</a><?php endif;?>
 				</nav>

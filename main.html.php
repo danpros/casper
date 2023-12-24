@@ -43,7 +43,7 @@
 			<ul class="author-list">
 				<li class="author-list-item">
 					<div class="author-name-tooltip"><?php echo $p->author;?></div>
-					<a href="<?php echo $p->authorUrl;?>" class="static-avatar"><img class="author-profile-image" src="<?php echo site_url();?>themes/casper/images/avatar.png" alt="<?php echo $p->authorName;?>"/></a>
+					<a href="<?php echo $p->authorUrl;?>" class="static-avatar"><img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $p->authorName;?>"/></a>
 				</li>
 			</ul>
 			<div class="post-card-byline-content">
@@ -60,15 +60,15 @@
 <?php if (!empty($pagination['prev']) || !empty($pagination['next'])): ?>
     <div class="pager">
         <?php if (!empty($pagination['prev'])) { ?>
-            <span class="newer" style="padding-right:30px;"><a href="?page=<?php echo $page - 1 ?>" rel="prev">&#8592; Newer</a></span>
+            <span class="newer" style="padding-right:30px;"><a href="?page=<?php echo $page - 1 ?>" rel="prev">&#8592; <?php echo i18n('Newer');?></a></span>
         <?php } else { ?>
-		<span class="newer" style="padding-right:30px;">&#8592; Newer</span>
+		<span class="newer" style="padding-right:30px;">&#8592; <?php echo i18n('Newer');?></span>
 		<?php } ?>
         <span class="page-number read-next-card-meta" style="text-align:center;dislay:inline-block;"><?php echo $pagination['pagenum'];?></span>
         <?php if (!empty($pagination['next'])) { ?>
-            <span class="older" style="padding-left:30px;"><a href="?page=<?php echo $page + 1 ?>" rel="next">Older &#8594;</a></span>
+            <span class="older" style="padding-left:30px;"><a href="?page=<?php echo $page + 1 ?>" rel="next"><?php echo i18n('Older');?> &#8594;</a></span>
         <?php } else { ?>
-			<span class="older" style="padding-left:30px;">Older &#8594;</span>
+			<span class="older" style="padding-left:30px;"><?php echo i18n('Older');?> &#8594;</span>
 		<?php } ?>
     </div>
 <?php endif; ?>
