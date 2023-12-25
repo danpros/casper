@@ -473,7 +473,7 @@ body {
  .author-template .post-feed,
  .home-template .post-feed,
  .tag-template .post-feed {
-  padding:40px 0 5vw;
+  padding:80px 0 5vw;
   border-top-left-radius:3px;
   border-top-right-radius:3px
  }
@@ -869,7 +869,7 @@ body {
 .post-feed {
  flex-wrap:wrap;
  margin:0 -20px;
- padding:50px 0 0;
+ padding:80px 0 0;
  background:#fff
 }
 .post-card,
@@ -1109,9 +1109,6 @@ body {
  }
 }
 @media (max-width:650px) {
- .post-feed {
-  padding-top:5vw
- }
  .post-card {
   margin-bottom:5vw
  }
