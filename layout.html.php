@@ -193,22 +193,7 @@
 							</a>
 
 							<footer class="post-card-meta">
-								<ul class="author-list">
-									<li class="author-list-item">
-								
-										<div class="author-name-tooltip">
-											<?php echo($next['author']); ?>
-										</div>
-								
-										<a href="<?php echo($next['authorUrl']); ?>" class="static-avatar">
-											<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo($next['title']); ?>">
-										</a>
-									</li>
-								</ul>
-								<div class="post-card-byline-content">
-									<span><a href="<?php echo($next['authorUrl']); ?>"><?php echo($next['author']); ?></a></span>
-									<span class="post-card-byline-date"><time><?php echo format_date($next['date']) ?></time> <span class="bull">•</span><?php echo $next['category'];?></span>
-								</div>
+								<span class="post-card-byline-date"><time><?php echo format_date($next['date']) ?></time> <span class="bull">•</span><?php echo $next['category'];?></span>
 							</footer>
 						</div>
 					</article>
@@ -253,22 +238,7 @@
 							</a>
 
 							<footer class="post-card-meta">
-								<ul class="author-list">
-									<li class="author-list-item">
-								
-										<div class="author-name-tooltip">
-											<?php echo($prev['author']); ?>
-										</div>
-								
-										<a href="<?php echo($prev['authorUrl']); ?>" class="static-avatar">
-											<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo($prev['title']); ?>">
-										</a>
-									</li>
-								</ul>
-								<div class="post-card-byline-content">
-									<span><a href="<?php echo($prev['authorUrl']); ?>"><?php echo($prev['author']); ?></a></span>
-									<span class="post-card-byline-date"><time><?php echo format_date($prev['date']) ?></time> <span class="bull">•</span><?php echo $prev['category'];?></span>
-								</div>
+								<span class="post-card-byline-date"><time><?php echo format_date($prev['date']) ?></time> <span class="bull">•</span><?php echo $prev['category'];?></span>
 							</footer>
 						</div>
 					</article>

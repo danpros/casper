@@ -34,22 +34,12 @@
 	<div class="post-card-content">
 			<a class="post-card-content-link" href="<?php echo $p->url;?>">
 			<header class="post-card-header">
-				<div class="post-card-primary-tag"><?php echo strip_tags($p->category)?></div>
 				<h2 class="post-card-title"><?php echo $p->title;?></h2>
 			</header>
 			<section class="post-card-excerpt"><?php echo $p->description; ?></section>
 			</a>
 		<footer class="post-card-meta">
-			<ul class="author-list">
-				<li class="author-list-item">
-					<div class="author-name-tooltip"><?php echo $p->authorName;?></div>
-					<a href="<?php echo $p->authorUrl;?>" class="static-avatar"><img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $p->authorName;?>"/></a>
-				</li>
-			</ul>
-			<div class="post-card-byline-content">
-				<span><a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></span>
-				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
-			</div>
+				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
 		</footer>
 	</div>
 </article>
