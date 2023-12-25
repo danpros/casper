@@ -39,7 +39,7 @@
 					<nav class="site-nav">
 						<div class="site-nav-left-wrapper">
 							<div class="site-nav-left">
-								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.png" alt="Ghost"></a>
+								<a class="site-nav-logo" href="<?php echo site_url();?>"><img src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo blog_title();?>"></a>
 								<div class="site-nav-content">
 									<?php echo menu();?>
 								</div>
