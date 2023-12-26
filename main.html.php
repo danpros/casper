@@ -5,11 +5,11 @@
 <article class="post-card post">
 	<?php if (!empty($p->image)) { ?>
 	<a class="post-card-image-link" href="<?php echo $p->url;?>">
-		<img class="post-card-image" src="<?php echo $p->image;?>">
+		<img class="post-card-image" alt="<?php echo $p->title;?>" src="<?php echo $p->image;?>">
 	</a>
 	<?php } elseif (!empty($img) && empty($p->quote)) { ?>
 	<a class="post-card-image-link" href="<?php echo $p->url;?>">
-		<img class="post-card-image" src="<?php echo $img;?>">
+		<img class="post-card-image" alt="<?php echo $p->title;?>" src="<?php echo $img;?>">
 	</a>
 	<?php } ?>
 	

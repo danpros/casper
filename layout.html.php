@@ -163,9 +163,9 @@
 									
 									<?php $img = get_image($next['body']);?>
 									<?php if (!empty($next['image'])) { ?>
-									<img class="post-card-image" style="margin-bottom:15px;" src="<?php echo$next['image'];?>">
+									<img class="post-card-image" alt="<?php echo $next['title'];?>" style="margin-bottom:15px;" src="<?php echo $next['image'];?>">
 									<?php } elseif (!empty($img) && empty($next['quote'])) { ?>
-									<img class="post-card-image" style="margin-bottom:15px;" src="<?php echo $img;?>">
+									<img class="post-card-image" alt="<?php echo $next['title'];?>" style="margin-bottom:15px;" src="<?php echo $img;?>">
 									<?php } ?>
 									
 									<?php if (!empty($next['video'])) { ?>
@@ -208,9 +208,9 @@
 										
 									<?php $img = get_image($prev['body']);?>
 									<?php if (!empty($prev['image'])) { ?>
-									<img class="post-card-image" style="margin-bottom:15px;" src="<?php echo$prev['image'];?>">
+									<img class="post-card-image" alt="<?php echo $prev['title'];?>" style="margin-bottom:15px;" src="<?php echo $prev['image'];?>">
 									<?php } elseif (!empty($img) && empty($prev['quote'])) { ?>
-									<img class="post-card-image" style="margin-bottom:15px;" src="<?php echo $img;?>">
+									<img class="post-card-image" alt="<?php echo $prev['title'];?>" style="margin-bottom:15px;" src="<?php echo $img;?>">
 									<?php } ?>
 									
 									<?php if (!empty($prev['video'])) { ?>
