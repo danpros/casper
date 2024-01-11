@@ -14,15 +14,15 @@
 	<?php } ?>
 	
 	<?php if (!empty($p->video)) { ?>
-	<span class="post-card-image-link">
-        <iframe width="100%" height="200" src="https://www.youtube.com/embed/<?php echo get_video_id($p->video); ?>" frameborder="0" allowfullscreen></iframe>
-	</span>
+	<a class="post-card-image-link" href="<?php echo $p->url;?>">
+        <img src="//img.youtube.com/vi/<?php echo get_video_id($p->video);?>/sddefault.jpg" width="100%">
+	</a>
 	<?php } ?>
 	
 	<?php if (!empty($p->audio)) { ?>
-	<span class="post-card-image-link">
-        <iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<?php echo $p->audio;?>&amp;auto_play=false&amp;visual=true"></iframe>
-	</span>
+	<a class="post-card-image-link" href="<?php echo $p->url;?>">
+        <img src="<?php echo theme_path();?>images/soundcloud.jpg" width="100%">
+	</a>
 	<?php } ?>
 	
 	<?php if (!empty($p->quote)) { ?>

@@ -68,11 +68,11 @@
 			<?php if (isset($is_profile)):?>		
 			<div class="outer site-header-background no-image">
 				<div class="inner site-header-content author-header">
-					<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $name;?>">
+					<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $author->name;?>">
 					<div class="author-header-content">
-						<h1 class="site-title"><?php echo $name;?></h1>
+						<h1 class="site-title"><?php echo $author->name;?></h1>
 						<style>.author-bio p {margin:0;}</style>
-						<div class="author-bio"><?php echo $about;?></div>
+						<div class="author-bio"><?php echo $author->about;?></div>
 						<div class="author-meta">
 							<span class="author-social-link"><a href="<?php echo site_url();?>" target="_blank" rel="noopener">Website</a></span>
 							<?php if(!empty(config('social.twitter'))):?><span class="author-social-link"><a href="<?php echo config('social.twitter');?>" target="_blank" rel="noopener">Twitter</a></span><?php endif;?>
@@ -170,13 +170,13 @@
 									
 									<?php if (!empty($next['video'])) { ?>
 									<span class="post-card-image-link" style="margin-bottom:15px;">
-										<iframe width="100%" height="200" src="https://www.youtube.com/embed/<?php echo $next['video']; ?>" frameborder="0" allowfullscreen></iframe>
+										<img src="//img.youtube.com/vi/<?php echo get_video_id($next['video']);?>/sddefault.jpg" width="100%">
 									</span>
 									<?php } ?>
 									
 									<?php if (!empty($next['audio'])) { ?>
 									<span class="post-card-image-link" style="margin-bottom:15px;">
-										<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<?php echo $next['audio'];?>&amp;auto_play=false&amp;visual=true"></iframe>
+										<img src="<?php echo theme_path();?>images/soundcloud.jpg" width="100%">
 									</span>
 									<?php } ?>
 									
@@ -215,13 +215,13 @@
 									
 									<?php if (!empty($prev['video'])) { ?>
 									<span class="post-card-image-link" style="margin-bottom:15px;">
-										<iframe width="100%" height="200" src="https://www.youtube.com/embed/<?php echo $prev['video']; ?>" frameborder="0" allowfullscreen></iframe>
+										<img src="//img.youtube.com/vi/<?php echo get_video_id($prev['video']);?>/sddefault.jpg" width="100%">
 									</span>
 									<?php } ?>
 									
 									<?php if (!empty($prev['audio'])) { ?>
 									<span class="post-card-image-link" style="margin-bottom:15px;">
-										<iframe width="100%" height="200" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=<?php echo $prev['audio'];?>&amp;auto_play=false&amp;visual=true"></iframe>
+										<img src="<?php echo theme_path();?>images/soundcloud.jpg" width="100%">
 									</span>
 									<?php } ?>
 									
