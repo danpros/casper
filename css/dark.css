@@ -167,3 +167,6 @@ hr {
 .subscribe-form .success .message-success {
   color:#abcf51
  }
+ .toc-wrapper {
+  background: rgb(46, 46, 51)!important;
+}
