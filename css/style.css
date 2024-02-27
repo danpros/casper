@@ -2723,11 +2723,19 @@ body {
  .site-footer-content {
   flex-direction:column
  }
- .site-footer-nav a:first-child {
-  margin-left:0
- }
 }
 
 .dropdown-menu {
   display:none;
+}
+
+.social-logo a{
+  color: #fff;
+  font-size:20px!important;
+  opacity: .8;
+  padding-right: 3px;
+}
+
+.social-logo a:hover {
+  opacity:1	
 }
