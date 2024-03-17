@@ -7,7 +7,7 @@
 	<a class="post-card-image-link" href="<?php echo $p->url;?>">
 		<img class="post-card-image" alt="<?php echo $p->title;?>" src="<?php echo $p->image;?>">
 	</a>
-	<?php } elseif (!empty($img) && empty($p->quote)) { ?>
+	<?php } elseif (!empty($img) && empty($p->quote) && empty($p->video) && empty($p->audio)) { ?>
 	<a class="post-card-image-link" href="<?php echo $p->url;?>">
 		<img class="post-card-image" alt="<?php echo $p->title;?>" src="<?php echo $img;?>">
 	</a>
