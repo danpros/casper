@@ -6,11 +6,10 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
-    <?php echo $metatags;?>
-	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
-	<?php if (config('casper.dark') == 'true') :?>
-	<link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">
-	<?php endif;?>
+    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
+    <?php if (config('casper.dark') == 'true') :?>
+    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">
+    <?php endif;?>
 </head>
 <?php if (isset($is_front)) {?>
 <body class="home-template">
@@ -159,7 +158,7 @@
 									<?php $img = get_image($next['body']);?>
 									<?php if (!empty($next['image'])) { ?>
 									<img class="post-card-image" alt="<?php echo $next['title'];?>" style="margin-bottom:15px;" src="<?php echo $next['image'];?>">
-									<?php } elseif (!empty($img) && empty($next['quote'])) { ?>
+									<?php } elseif (!empty($img) && empty($next['quote']) && empty($next['video']) && empty($next['audio'])) { ?>
 									<img class="post-card-image" alt="<?php echo $next['title'];?>" style="margin-bottom:15px;" src="<?php echo $img;?>">
 									<?php } ?>
 									
@@ -204,7 +203,7 @@
 									<?php $img = get_image($prev['body']);?>
 									<?php if (!empty($prev['image'])) { ?>
 									<img class="post-card-image" alt="<?php echo $prev['title'];?>" style="margin-bottom:15px;" src="<?php echo $prev['image'];?>">
-									<?php } elseif (!empty($img) && empty($prev['quote'])) { ?>
+									<?php } elseif (!empty($img) && empty($prev['quote']) && empty($prev['video']) && empty($prev['audio'])) { ?>
 									<img class="post-card-image" alt="<?php echo $prev['title'];?>" style="margin-bottom:15px;" src="<?php echo $img;?>">
 									<?php } ?>
 									
