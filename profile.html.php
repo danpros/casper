@@ -39,7 +39,7 @@
 			<section class="post-card-excerpt"><?php echo $p->description; ?></section>
 			</a>
 		<footer class="post-card-meta">
-				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
+				<span class="post-card-byline-date"><time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (authorized($p)):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?></span>  
 		</footer>
 	</div>
 </article>

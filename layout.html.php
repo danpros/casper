@@ -6,6 +6,7 @@
     <title><?php echo $title;?></title>
     <meta name="description" content="<?php echo $description; ?>"/>
     <link rel="canonical" href="<?php echo $canonical; ?>" />
+    <?php echo $metatags;?>
     <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
     <?php if (config('casper.dark') == 'true') :?>
     <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">

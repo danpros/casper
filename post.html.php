@@ -19,7 +19,7 @@
 				<section class="post-full-byline-meta">
 					<h4 class="author-name"><a href="<?php echo $p->authorUrl;?>"><?php echo $p->authorName;?></a></h4>
 					<div class="byline-meta-content">
-					<time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (login()):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?>
+					<time><?php echo format_date($p->date) ?></time> <span class="bull">•</span> <?php echo $p->category;?> <?php if (authorized($p)):?><span class="bull">•</span> <a href="<?php echo $p->url;?>/edit?destination=post">Edit</a><?php endif;?>
 					</div>
 				</section>
 			</section>
