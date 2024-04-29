@@ -12,7 +12,7 @@
 				<ul class="author-list">
 					<li class="author-list-item">
 						<a href="<?php echo $p->authorUrl;?>" class="author-avatar">
-							<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $p->authorName;?>">
+							<img class="author-profile-image" src="<?php echo $p->authorAvatar;?>" alt="<?php echo $p->authorName;?>">
 						</a>
 					</li>
 				</ul>

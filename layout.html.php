@@ -63,7 +63,7 @@
 			<?php if (isset($is_profile)):?>		
 			<div class="outer site-header-background no-image">
 				<div class="inner site-header-content author-header">
-					<img class="author-profile-image" src="<?php echo theme_path();?>images/avatar.png" alt="<?php echo $author->name;?>">
+					<img class="author-profile-image" src="<?php echo $author->avatar;?>" alt="<?php echo $author->name;?>">
 					<div class="author-header-content">
 						<h1 class="site-title"><?php echo $author->name;?></h1>
 						<style>.author-bio p {margin:0;}</style>
