@@ -4,8 +4,8 @@
 <head>    
     <?php echo head_contents();?>
     <?php echo $metatags;?>
-    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css">
-    <?php if (config('casper.dark') == 'true') :?>
+    <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/style.css?v=1">
+    <?php if (theme_config('casper_dark')) :?>
     <link rel="stylesheet" type="text/css" href="<?php echo theme_path();?>css/dark.css">
     <?php endif;?>
 </head>
@@ -14,11 +14,11 @@
 <?php if (login()) { toolbar(); } ?>
 	<div class="site-wrapper">
 		<header class="site-home-header">
-		<?php if (empty(config('casper.header'))) {?>
+		<?php if (empty(theme_config('casper_header'))):?>
 		<style type="text/css">.responsive-header-img {background-image: url(<?php echo theme_path();?>images/publication-cover.jpg);}</style>
-		<?php } else {?>
-		<style type="text/css">.responsive-header-img {background-image: url(<?php echo config('casper.header')?>);}</style>
-		<?php } ?>
+		<?php else: ?>
+		<style type="text/css">.responsive-header-img {background-image: url(<?php echo theme_config('casper_header')?>);}</style>
+		<?php endif; ?>
 			<div class="outer site-header-background responsive-header-img">
 <?php } elseif (isset($is_post) || isset($is_page) || isset($is_subpage) || isset($is_404) || isset($is_404search)) {?>
 <body class="post-template">

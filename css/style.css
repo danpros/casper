@@ -2739,3 +2739,7 @@ body {
 .social-logo a:hover {
   opacity:1	
 }
+
+.toc-wrapper {
+  min-width:100%;
+}

@@ -2,7 +2,7 @@
 
 <?php
 // Determine the text direction
-$direction = (preg_match('/\p{Arabic}/u', $p->body) || $config['lang'] === 'ar') ? 'rtl' : 'ltr';
+$direction = (preg_match('/\p{Arabic}/u', $p->body) || config('lang') === 'ar') ? 'rtl' : 'ltr';
 ?>
 
 <article class="post-full post <?php echo $direction; ?>" dir="<?php echo $direction; ?>">

@@ -1,0 +1,23 @@
+{
+  "name": "Casper",
+  "version": "2.1",
+  "author": "Ghost Foundation",
+  "homepage": "https://ghost.org",
+  "description": " Casper theme by Ghost.org ported to HTMLy.",
+  "settings": [
+    {
+      "type": "checkbox",
+      "name": "casper_dark",
+      "label": "Casper Dark",
+      "value": "",
+      "info": "Casper Dark mode"
+    },
+    {
+      "type": "url",
+      "name": "casper_header",
+      "label": "Casper Header",
+      "value": "",
+      "info": "You can use custom header background for the frontpage. Please specify image URL."
+    }
+  ]
+}
